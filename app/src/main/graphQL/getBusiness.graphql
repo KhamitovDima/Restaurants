@@ -1,0 +1,13 @@
+query getB($latitude: Float, $longitude: Float, $offset: Int)
+     {
+          search(limit: 10, offset: $offset, latitude: $latitude, longitude: $longitude, radius: 5000) {
+            business {
+              name
+              id
+              distance
+              photos
+              rating
+            }
+          }
+        }
+
